@@ -1,0 +1,4 @@
+--chapter01 1),5),8)
+--select onum, amt, odate from Orders
+--select city, sname, snum, comm from Salespeople
+--select sname, comm from Salespeople where city = 'London'
