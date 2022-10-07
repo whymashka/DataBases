@@ -2,3 +2,8 @@
 --select onum, amt, odate from Orders
 --select city, sname, snum, comm from Salespeople
 --select sname, comm from Salespeople where city = 'London'
+
+--chapter02 1),4),6)
+--select * from Orders where amt > 1000
+--select cname, city from Customers where city = 'San Jose' and rating > 150
+--select * from Salespeople where city != 'London' and comm > 0.11
