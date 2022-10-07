@@ -38,3 +38,17 @@ from Customers c join Orders o on c.cnum = o.cnum
    join Salespeople s on s.snum = o.snum 
 where rating > 100
 
+--chapter09 1),4),7)
+select c1.cname, c2.cname, c1.city from Customers c1, Customers c2
+where c1.city = c2.city and c1.cnum < c2.cnum
+
+select c1.cname, c2.cname, o1.odate
+from Orders o1,Orders o2, Customers c1, Customers c2 
+where o1.cnum = c1.cnum and o2.cnum = c2.cnum 
+      and o1.odate = o2.odate and c1.cnum < c2.cnum
+      
+select * 
+from Customers
+where rating = (select rating 
+              from Customers 
+              where cname = 'Hoffman')
