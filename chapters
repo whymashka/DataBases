@@ -88,3 +88,12 @@ where exists (select *
                where s.snum =o.snum
                   and o.cnum=c.cnum
                        and c.rating=300)
+                       
+select o1.onum
+from Orders o1
+where (select c.cnum
+       from Customers c
+        where 1<(select count (*)
+                 from Orders o2
+                  where o2.cnum=c.cnum))
+        
