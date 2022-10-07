@@ -1,9 +1,14 @@
---chapter01 1),5),8)
+--chapter03 1),5),8)
 --select onum, amt, odate from Orders
 --select city, sname, snum, comm from Salespeople
 --select sname, comm from Salespeople where city = 'London'
 
---chapter02 1),4),6)
+--chapter04 1),4),6)
 --select * from Orders where amt > 1000
 --select cname, city from Customers where city = 'San Jose' and rating > 150
 --select * from Salespeople where city != 'London' and comm > 0.11
+
+--chapter05 2),5),8)
+--select * from Orders where odate in ('2015-10-03', '2015-10-06') 
+--select * from Customers where cname between 'A' and 'G'
+--select * from Salespeople where sname like '%s'
