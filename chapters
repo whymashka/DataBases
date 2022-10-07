@@ -12,3 +12,8 @@
 --select * from Orders where odate in ('2015-10-03', '2015-10-06') 
 --select * from Customers where cname between 'A' and 'G'
 --select * from Salespeople where sname like '%s'
+
+--chapter06 1),5),10)
+--select count (*), sum (amt) from Orders where odate ='2015-10-03'
+--select cname from Customers where cname like 'G%' group by cname order by cname
+--select odate, min (amt)bfrom Orders group by odate order by 1
