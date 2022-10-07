@@ -22,3 +22,19 @@
 --select onum, amt, amt-amt*0.05 as amt_without_tax  from Orders
 --select 'В городе ' || city ||' наименьшие комиссионные ' || min (comm) from Salespeople group by city
 --select odate, sum (amt) from Orders group by odate order by 2 desc
+
+--chapter08 1),5),7)
+select onum, cname
+from Orders, Customers
+where Orders.cnum = Customers.cnum
+
+select cname, sname,comm
+from Customers c join Orders o on c.cnum = o.cnum
+   join Salespeople s on s.snum = o.snum 
+where  comm > 0.12
+
+select cname, onum, amt*comm as sum_tax 
+from Customers c join Orders o on c.cnum = o.cnum
+   join Salespeople s on s.snum = o.snum 
+where rating > 100
+
