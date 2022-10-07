@@ -17,3 +17,8 @@
 --select count (*), sum (amt) from Orders where odate ='2015-10-03'
 --select cname from Customers where cname like 'G%' group by cname order by cname
 --select odate, min (amt)bfrom Orders group by odate order by 1
+
+--chapter07 2),4),7)
+--select onum, amt, amt-amt*0.05 as amt_without_tax  from Orders
+--select 'В городе ' || city ||' наименьшие комиссионные ' || min (comm) from Salespeople group by city
+--select odate, sum (amt) from Orders group by odate order by 2 desc
