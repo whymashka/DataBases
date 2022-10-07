@@ -52,3 +52,24 @@ from Customers
 where rating = (select rating 
               from Customers 
               where cname = 'Hoffman')
+              
+--chapter10 1),3),6)
+select *
+from orders
+where cnum = (select cnum
+              from Customers
+              where cname = 'Cisneros')
+                 
+select cname, rating
+from Customers
+where cnum IN (select cnum
+               from Orders
+               where amt > (select avg(amt)
+                           from Orders))
+                           
+select snum, sum(amt) 
+from Orders 
+group by snum 
+having sum(amt) > (select max(amt) 
+                        from Orders)
+
