@@ -73,3 +73,18 @@ group by snum
 having sum(amt) > (select max(amt) 
                         from Orders)
 
+--chapter11-12 1),4),)
+select s.sname, s.snum
+from Customers c1 join Orders o on c1.cnum = o.cnum
+    join Salespeople s on s.snum = o.snum 
+    where rating=(select max(rating)
+                    from Customers c2
+                    where c1.city=c2.city)
+
+select s.sname, s.snum
+from Salespeople s
+where exists (select *
+              from Salespeople s, Orders o, Customers c
+               where s.snum =o.snum
+                  and o.cnum=c.cnum
+                       and c.rating=300)
